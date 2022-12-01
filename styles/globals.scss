@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    body {
+      overflow-x: hidden;
+      .nav {
+        backdrop-filter: blur(2px);
+
+        .logo {
+          svg {
+            @apply hover:text-secondary-color;
+          }
+        }
+
+        .humberger {
+          @apply flex lg:hidden items-center justify-center  w-7 h-7 rounded-full hover:text-white hover:bg-secondary-color;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .ul {
+          @apply hidden lg:flex gap-5;
+          .btn {
+            @apply cursor-pointer uppercase flex flex-col items-center text-gray-color hover:text-secondary-color;
+
+            div {
+              opacity: 0;
+              transition: opacity 0.3s ease-in-out;
+            }
+            &:hover {
+              div {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        .ulCol {
+          transition: all 0.3s ease-in-out;
+          .btnCol {
+            @apply border-b pb-2 text-gray-color hover:text-secondary-color;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
