@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Navbar from '../components/Navbar'
 import About from '../components/About'
 import Portfolio from '../components/Portfolio'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
       </main>
       
       <footer>
-        <h3 className='capitalize'>all rights reserved</h3>
+        <Footer/>
       </footer>
     </div>
   )

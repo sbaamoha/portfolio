@@ -13,7 +13,7 @@ import { UseThemeProps } from 'next-themes/dist/types'
 
 const Navbar = () => {
     const [mounted, setMounted] = useState(false)
-    const  {systemTheme , theme, setTheme} = useTheme();
+    const {systemTheme , theme, setTheme} = useTheme();
     
     
     const renderThemeChanger = () => {
@@ -87,7 +87,7 @@ const Navbar = () => {
             </ul>
 
             <div className='hidden lg:block'>
-            {renderThemeChanger()}
+                {renderThemeChanger()}
             </div>
         </nav>
   )

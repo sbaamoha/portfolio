@@ -15,7 +15,7 @@ const Portfolio: React.FC = () => {
       },[])
 
     return (
-        <div>
+        <div id="projects">
             <h2 className="uppercase text-4xl text-center">my <span className="text-secondary-color">projects</span></h2>
             <div className="py-12 grid grid-cols-1 lg:grid-cols-3 gap-6 px-6 lg:px-12">
                 {projects.map(project => 

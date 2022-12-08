@@ -3,6 +3,9 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import {images} from '../public/constants'
+import Image from 'next/image';
+
 const Header: React.FC = () => {
 
 
@@ -12,7 +15,7 @@ const Header: React.FC = () => {
   
 
   return (
-    <div className="text-center px-6 h-[70vh] my-16 lg:my-0 flex flex-col justify-center items-center gap-5 lg:gap-10">
+    <div className="text-center px-6 h-[70vh] my-16 flex flex-col justify-center items-center gap-5 lg:gap-10">
         <div 
           data-aos="fade-right"
           data-aos-delay="100" 
