@@ -24,7 +24,7 @@ export default function Home() {
       </main>
       
       <footer>
-
+        <h3 className='capitalize'>all rights reserved</h3>
       </footer>
     </div>
   )
