@@ -1,6 +1,14 @@
 import { images } from "./index";
 export const projects = [
   {
+    id: 4,
+    title: "sba e-commerce",
+    desc: "MERN stack ecommerce website with authentication and authorization with JWT",
+    img: images.ecommerce,
+    github: "https://github.com/sbaamoha/ecommerce-front",
+    live: "https://snazzy-sundae-0762e9.netlify.app/",
+  },
+  {
     id: 1,
     title: "hoobank landing page",
     desc: "responsive landing page",
@@ -23,13 +31,5 @@ export const projects = [
     img: images.bookmark,
     github: "https://github.com/sbaamoha/frontend001/tree/master",
     live: "https://sbaamoha.github.io/frontend001/src/",
-  },
-  {
-    id: 4,
-    title: "sba e-commerce",
-    desc: "MERN stack ecommerce website with authentication and authorization with JWT",
-    img: images.ecommerce,
-    github: "https://github.com/sbaamoha/ecommerce-front",
-    live: "https://snazzy-sundae-0762e9.netlify.app/",
   },
 ];
