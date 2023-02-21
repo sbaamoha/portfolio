@@ -19,6 +19,9 @@ const ContactUs = () => {
     emailjs
       .send(service_id, template_id, template_params, "eKMTuVxoTrFA8pNI9")
       .then((res) => console.log(res));
+    setName("");
+    setEmail("");
+    setMessage("");
   };
   return (
     <div className="md:flex flex-col md:justify-between gap-6 p-12 capitalize rounded-md shadow-md">
