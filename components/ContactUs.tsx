@@ -9,7 +9,7 @@ const ContactUs = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const template_params = {
-      to_email: email,
+      from_email: email,
       from_name: name,
       message: message,
     };
