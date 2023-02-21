@@ -38,7 +38,7 @@ const Header: React.FC = () => {
           <h2 className='text-xl lg:text-3xl'>i&apos;m front end developer <br/> <span className='text-xl'>using reactjs</span></h2>
         </div>
         <div className='uppercase text-3xl text-center border-b py-6 dark:border-gray-700'>
-          <h3>i know that<span className='uppercase text-secondary-color'> good website</span> <br/>means<span className='uppercase text-secondary-color'> good buisnes</span></h3>
+          <h3>i know that<span className='uppercase text-secondary-color'> good website</span> <br/>means<span className='uppercase text-secondary-color'> good buisness</span></h3>
         </div>
         
     </div>
