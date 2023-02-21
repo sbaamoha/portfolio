@@ -11,6 +11,7 @@ const ContactUs = () => {
     const template_params = {
       from_email: email,
       from_name: name,
+      to_email: "sbaamohe@gmail.com",
       message: message,
     };
     const service_id = "service_z9e5g9f";
