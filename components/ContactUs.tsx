@@ -7,7 +7,7 @@ const ContactUs = () => {
   const [email, setEmail] = useState<string>();
   const [message, setMessage] = useState<string>();
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    
+    e.preventDefault()
     const template_params = {
       from_email: email,
       from_name: name,
