@@ -19,10 +19,10 @@ const ContactUs = () => {
     emailjs
       .send(service_id, template_id, template_params, "eKMTuVxoTrFA8pNI9")
       .then((res) =>   
-            setName("")
-            setEmail("")
-            setMessage("")
-   
+           
+           
+           
+   return
 
             
     
