@@ -18,11 +18,16 @@ const ContactUs = () => {
     const template_id = "template_qpqxue4";
     emailjs
       .send(service_id, template_id, template_params, "eKMTuVxoTrFA8pNI9")
-      .then((res) =>   setName("");
+      .then((res) =>   
+            setName("")
+            setEmail("")
+            setMessage("")
+   
 
-    setEmail("");
+            
+    
 
-    setMessage(""));
+)
  
 
 
