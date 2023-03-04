@@ -8,6 +8,9 @@ const ContactUs = () => {
   const [message, setMessage] = useState<string>();
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    if(!name || !email || !message){
+      return 'fill the data'
+      }
     const template_params = {
       from_email: email,
       from_name: name,
