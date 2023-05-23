@@ -7,8 +7,9 @@ const ContactUs = () => {
   const [message, setMessage] = useState<string>("");
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!name || !email || !message) {
-      return "fill the data";
+    if (!name.length || !email.length || !message.length) {
+      toast.error("fill the data");
+      return;
     }
     const template_params = {
       from_email: email,
@@ -25,7 +26,7 @@ const ContactUs = () => {
         setEmail("");
         setMessage("");
         window.scrollTo(0, 0);
-        // toast.success("Email send successfully");
+        toast.success("Email send successfully");
       })
       .catch((err) => {
         console.log(err);
@@ -46,6 +47,7 @@ const ContactUs = () => {
         <input
           type="text"
           value={name}
+          required
           placeholder="Enter Your name"
           className="rounded-md p-2"
           onChange={(e) => {
@@ -56,6 +58,7 @@ const ContactUs = () => {
         <input
           type="email"
           value={email}
+          required
           placeholder="Enter Your email"
           className="rounded-md p-2"
           onChange={(e) => {
@@ -66,6 +69,7 @@ const ContactUs = () => {
         <textarea
           placeholder="Enter Your message"
           className="rounded-md p-2"
+          required
           value={message}
           onChange={(e) => {
             setMessage(e.target.value);

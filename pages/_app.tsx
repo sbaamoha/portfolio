@@ -5,8 +5,8 @@ import { ToastContainer } from "react-toastify";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider enableSystem={true} attribute="class">
-      <ToastContainer />
       <Component {...pageProps} />
+      <ToastContainer />
     </ThemeProvider>
   );
 }

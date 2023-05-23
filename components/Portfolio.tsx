@@ -8,6 +8,15 @@ import { AiFillGithub } from "react-icons/ai";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+interface IProject {
+  title: string;
+  id: number;
+  img: string;
+  live: string;
+  github: string;
+  desc: string;
+}
+
 const Portfolio: React.FC = () => {
   useEffect(() => {
     AOS.init();
@@ -19,13 +28,13 @@ const Portfolio: React.FC = () => {
         my <span className="text-secondary-color">projects</span>
       </h2>
       <div className="pt-12 grid grid-cols-1 lg:grid-cols-3 gap-6 px-6 lg:px-12">
-        {projects.map((project) => (
+        {projects.map((project: IProject) => (
           <div className="rounded-lg shadow-lg" key={project.id}>
             <Link href={project.live}>
               <Image
-                data-aos="fade-right"
-                data-aos-delay="100"
-                data-aos-duration="1000"
+                // data-aos="fade-right"
+                // data-aos-delay="100"
+                // data-aos-duration="1000"
                 className="rounded-lg cursor-pointer"
                 src={project.img}
                 alt={project.title}

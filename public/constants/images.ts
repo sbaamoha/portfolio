@@ -10,18 +10,13 @@ import react from "../assets/react.png";
 import redux from "../assets/redux.png";
 import sass from "../assets/sass.png";
 import typescript from "../assets/typescript.png";
-import ecommerce from "../assets/ecommerce-desktop.png";
 import about01 from "../assets/about01.png";
 import about02 from "../assets/about02.png";
 import about04 from "../assets/about04.png";
-import hoobank from "../assets/hoobank.png";
-import bookmark from "../assets/bookmark.png";
-import nextGeneration from "../assets/next-generation.png";
 
-import profile from "../assets/profile.png";
 import circle from "../assets/circle.svg";
 
-export default {
+export const images = {
   api,
   css,
   git,
@@ -37,10 +32,5 @@ export default {
   about01,
   about02,
   about04,
-  profile,
   circle,
-  hoobank,
-  nextGeneration,
-  bookmark,
-  ecommerce,
 };
