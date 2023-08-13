@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="font-dm-sans bg-primary-color dark:bg-slate-800 dark:text-white">
       <Head>
-        <title>Mohamed's Portfolio</title>
+        <title>Mohamed&apos;s Portfolio</title>
         <meta name="description" content="Mohamed's Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
