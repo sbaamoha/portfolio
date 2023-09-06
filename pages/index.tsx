@@ -24,6 +24,10 @@ export default function Home() {
           property="og:description"
           content="A fullstack developer with experience building web apps."
         />
+        <meta
+          name="google-site-verification"
+          content="ietZuXf8j4Yw1TtotYWAT7hv9ooHl_jIaWshp8ebPC8"
+        />
       </Head>
 
       <header className="z-10 bg-transparent sticky top-0 w-full">
