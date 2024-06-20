@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Image from "next/image"
+import Image from "next/image";
 const Header: React.FC = () => {
   useEffect(() => {
     AOS.init();
@@ -26,7 +26,7 @@ const Header: React.FC = () => {
             About Me
           </h2>
           <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
-            Hello! I'm <strong>Mohamed</strong>, a professional software
+            Hello! I&lsquo;m <strong>Mohamed</strong>, a professional software
             developer with a knack for creating elegant solutions in the least
             amount of time.
           </p>
