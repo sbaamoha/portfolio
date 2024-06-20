@@ -34,10 +34,11 @@ const ContactUs = () => {
       });
   };
   return (
-    <div className="w-[50%] m-auto my-6 md:flex flex-col md:justify-between gap-6 p-12 capitalize rounded-md shadow-md">
-      <h2 className="uppercase text-4xl text-center pb-12">
-        contact <p className="text-secondary-color inline">me</p>
-      </h2>
+    <div
+      id="contact"
+      className="max-w-full md:flex flex-col md:justify-between gap-6 p-12 capitalize rounded-md shadow-md"
+    >
+      <h2 className="capitalize text-4xl text-center pb-12">contact me</h2>
 
       <form
         onSubmit={handleSubmit}

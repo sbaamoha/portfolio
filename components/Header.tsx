@@ -1,48 +1,56 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-import {images} from '../public/constants'
-import Image from 'next/image';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Header: React.FC = () => {
-
-
   useEffect(() => {
-    AOS.init()
-  },[])
-  
+    AOS.init();
+  }, []);
 
   return (
-    <div className="text-center px-6 h-[70vh] my-16 flex flex-col justify-center items-center gap-5 lg:gap-10">
-        <div 
-          data-aos="fade-right"
-          data-aos-delay="100" 
-          data-aos-duration="1000"
-          className='capitalize p-5 shadow-md rounded-2xl'>
-            
-            <h2 className="cursor-pointer text-4xl">
-              <p 
-              data-aos="slide-down"
-              data-aos-delay="400"
-              data-aos-duration="1000"
-              className='text-4xl cursor-pointer'
-            >👋🏼</p>hi, i&apos;m<br/><span className='uppercase text-3xl font-extralight text-secondary-color'>mohamed</span></h2>
+    <section id="about" className="px-3 py-12">
+      <div className="container mx-auto flex flex-col md:flex-row items-center">
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img
+            src="/assets/profile.jpeg"
+            alt="Profile"
+            // className="w-[80%] h-[80%] object-cover rounded-full shadow-md"
+            className="w-5/6 h-5/6 object-cover rounded-full shadow-md"
+          />
         </div>
-        <div 
-          className='capitalize rounded-lg shadow-md p-10'
-          data-aos="fade-left"
-          data-aos-delay="100" 
-          data-aos-duration="1000">
-          <h2 className='text-xl lg:text-3xl'>i&apos;m front end developer <br/> <span className='text-xl'>using reactjs</span></h2>
+        <div className="w-full md:w-1/2 mt-8 md:mt-0 md:ml-12 text-center md:text-left">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+            About Me
+          </h2>
+          <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
+            Hello! I'm <strong>Mohamed</strong>, a professional software
+            developer with a knack for creating elegant solutions in the least
+            amount of time.
+          </p>
+          <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
+            With over two years of experience in software development, I am a
+            dedicated professional known for crafting efficient solutions with
+            precision and speed. I thrive on tackling complex challenges and
+            excel in creating innovative solutions. My expertise spans across
+            front-end and back-end development, allowing me to approach every
+            project with a holistic perspective.
+          </p>
+          <h3 className="mt-6 text-2xl font-semibold text-gray-900 dark:text-gray-100">
+            Skills & Interests
+          </h3>
+          <ul className="mt-4 text-lg text-gray-700 dark:text-gray-300">
+            <li>- Front-end Development (React.js, Next.js, TypeScript)</li>
+            <li>- Back-end Development (Node.js, Django)</li>
+            <li>- API Integration & Development</li>
+            <li>- Open-source Contributions</li>
+            <li>- Continuous Learning & Improvement</li>
+            <li>- Docker & DevOps</li>
+          </ul>
         </div>
-        <div className='uppercase text-3xl text-center border-b py-6 dark:border-gray-700'>
-          <h3>i know that<span className='uppercase text-secondary-color'> good website</span> <br/>means<span className='uppercase text-secondary-color'> good buisness</span></h3>
-        </div>
-        
-    </div>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default Header
+export default Header;

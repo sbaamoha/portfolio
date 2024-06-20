@@ -5,6 +5,7 @@ import About from "../components/About";
 import Portfolio from "../components/Portfolio";
 import Footer from "../components/Footer";
 import ContactUs from "../components/ContactUs";
+import Experience from "../components/Experience";
 
 export default function Home() {
   return (
@@ -18,11 +19,11 @@ export default function Home() {
           content="portfolio, web development, react , design, projects"
         />
         <meta property="og:title" content="Mohamed Sba - Portfolio" />
-        <link rel="icon" href="/icon.jpg" />
-        <meta property="og:image" content="URL_to_your_featured_image.jpg" />
+        <link rel="icon" href="/bag.png" />
+
         <meta
           property="og:description"
-          content="A fullstack developer with experience building web apps."
+          content="A Software developer with experience building web apps."
         />
         <meta
           name="google-site-verification"
@@ -30,13 +31,14 @@ export default function Home() {
         />
       </Head>
 
-      <header className="z-10 bg-transparent sticky top-0 w-full">
+      <header className="z-10 bg-transparent sticky top-0 w-full px-3">
         <Navbar />
       </header>
 
       <main className="flex flex-col gap-10 lg:gap-16">
         <Header />
-        <About />
+        {/* <About /> */}
+        <Experience />
         <Portfolio />
         <ContactUs />
       </main>
