@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import Image from "next/image"
 const Header: React.FC = () => {
   useEffect(() => {
     AOS.init();
@@ -12,9 +12,11 @@ const Header: React.FC = () => {
     <section id="about" className="px-3 py-12">
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         <div className="w-full md:w-1/2 flex justify-center">
-          <img
+          <Image
             src="/assets/profile.jpeg"
             alt="Profile"
+            width={800}
+            height={600}
             // className="w-[80%] h-[80%] object-cover rounded-full shadow-md"
             className="w-5/6 h-5/6 object-cover rounded-full shadow-md"
           />
