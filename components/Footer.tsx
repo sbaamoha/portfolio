@@ -7,7 +7,9 @@ const Footer: React.FC = () => {
       <h3 className="capitalize">all rights reserved</h3>
       <div className="flex gap-5 text-2xl">
         <Link
-          href={`${process.env.NEXT_PUBLIC_GITHUB_URL}`}
+          href={`${
+            process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/sbaamoha"
+          }`}
           legacyBehavior
           passHref
         >
@@ -16,7 +18,10 @@ const Footer: React.FC = () => {
           </a>
         </Link>
         <Link
-          href={`${process.env.NEXT_PUBLIC_LINKEDIN_URL}`}
+          href={`${
+            process.env.NEXT_PUBLIC_LINKEDIN_URL ||
+            "https://linkedin.com/in/sbamoha"
+          }`}
           legacyBehavior
           passHref
         >

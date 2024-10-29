@@ -40,7 +40,6 @@
               }
             }
           }
-        
         }
 
         .ulCol {
@@ -51,14 +50,26 @@
           }
         }
       }
-      .skill{
-        img{
+      .skill {
+        img {
           transform: scale(1);
-          transition: transform .3s ease;
+          transition: transform 0.3s ease;
           &:hover {
-            transform: scale(1.1)
+            transform: scale(1.1);
           }
         }
+      }
+      .cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(0, 102, 255, 0.3); /* Customize as needed */
+        pointer-events: none;
+        z-index: 1000;
+        mix-blend-mode: difference; /* For a cool blend effect */
       }
     }
   }

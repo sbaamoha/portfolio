@@ -1,91 +1,132 @@
-import * as emailjs from "emailjs-com";
 import { useState } from "react";
 import { toast } from "react-toastify";
 const ContactUs = () => {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!name.length || !email.length || !message.length) {
-      toast.error("fill the data");
-      return;
-    }
-    const template_params = {
-      from_email: email,
-      from_name: name,
-      to_email: "sbaamohe@gmail.com",
-      message: message,
-    };
-    const service_id = "service_z9e5g9f";
-    const template_id = "template_qpqxue4";
-    return emailjs
-      .send(service_id, template_id, template_params, "eKMTuVxoTrFA8pNI9")
-      .then(() => {
-        setName("");
-        setEmail("");
-        setMessage("");
-        window.scrollTo(0, 0);
-        toast.success("Email send successfully");
-      })
-      .catch((err) => {
-        console.log(err);
-        toast.error("can't send email");
-      });
-  };
-  return (
-    <div
-      id="contact"
-      className="max-w-full md:flex flex-col md:justify-between gap-6 p-12 capitalize rounded-md shadow-md"
-    >
-      <h2 className="capitalize text-4xl text-center pb-12">contact me</h2>
+  const [formData, setFormData] = useState({
+    firstName: "",
+    subject: "",
+    email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<Record<string, any>>({});
+  const [status, setStatus] = useState("");
 
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-1 justify-start flex-col gap-1"
-      >
-        <label>name</label>
-        <input
-          type="text"
-          value={name}
-          required
-          placeholder="Enter Your name"
-          className="rounded-md p-2"
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
-        <label>email</label>
-        <input
-          type="email"
-          value={email}
-          required
-          placeholder="Enter Your email"
-          className="rounded-md p-2"
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-        />
-        <label>message</label>
-        <textarea
-          placeholder="Enter Your message"
-          className="rounded-md p-2"
-          required
-          value={message}
-          onChange={(e) => {
-            setMessage(e.target.value);
-          }}
-        />
+  // Validation function
+  const validate = () => {
+    const errors: Record<string, any> = {};
+    if (!formData.firstName.trim()) {
+      errors.firstName = "Name is required";
+    }
+    if (!formData.subject.trim()) {
+      errors.subject = "Subject is required";
+    }
+    if (!formData.email) {
+      errors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = "Email address is invalid";
+    }
+    if (!formData.message.trim()) {
+      errors.message = "Message is required";
+    }
+    setErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    if (!validate()) return; // Prevent submission if validation fails
+
+    setStatus("Sending...");
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Email sent successfully!");
+        setFormData({ firstName: "", email: "", message: "", subject: "" });
+        setErrors({});
+      } else {
+        const errorData = await response.json();
+        toast.error(`Failed to send email: ${errorData.error}`);
+      }
+    } catch (error) {
+      toast.error("An error occurred while sending the email.");
+      console.error(error);
+    }
+    setStatus("");
+  };
+
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  return (
+    <div className="max-w-full mx-auto mt-10 p-6 shadow-md rounded-md">
+      <h2 className="text-2xl font-semibold mb-4 text-center">Contact Us</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label className="block">Subject</label>
+          <input
+            type="text"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          {errors.subject && (
+            <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
+          )}
+        </div>
+        <div>
+          <label className="block">Name</label>
+          <input
+            type="text"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          {errors.firstName && (
+            <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
+          )}
+        </div>
+        <div>
+          <label className="block ">Email</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          {errors.email && (
+            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+          )}
+        </div>
+        <div>
+          <label className="block ">Message</label>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            rows={4}
+          />
+          {errors.message && (
+            <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+          )}
+        </div>
         <button
           type="submit"
-          disabled={name.length === 0 || email.length === 0}
-          className="rounded-sm bg-secondary-color text-white capitalize py-2 mt-3"
+          className="w-full bg-blue-500 text-white font-semibold py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
         >
-          send email
+          {status === "Sending..." ? "Sending..." : "Send Message"}
         </button>
       </form>
     </div>
   );
 };
-
 export default ContactUs;

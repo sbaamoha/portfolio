@@ -83,7 +83,9 @@ const Navbar = () => {
             className="btnCol my-6"
             key={item}
           >
-            <Link href={`#${item}`}>{item}</Link>
+            <Link className="text-xl font-extrabold" href={`#${item}`}>
+              {item}
+            </Link>
           </li>
         ))}
         <li className="flex text-2xl gap-3 absolute bottom-16 right-5">

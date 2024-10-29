@@ -24,7 +24,10 @@ export const projects = [
     id: 6,
     title: "Moroccan Products Store",
     description: [
+      "Worked as backend developer with Node.js and Medusa.js",
       "Integrated the backend with different merchant centers including (Meta, Google, Bing, Tiktok, Twitter).",
+      "Created a custom medusa.js plugin and integrated it with main project.",
+      "Improve the SEO rank using nextjs with the recommended attitudes.",
     ],
     img: "/assets/maroc4ps.png",
     live: "https://shop.maroc4ps.com/en",
@@ -42,9 +45,11 @@ export const projects = [
     id: 3,
     title: "ERP Manufactoring system dashboard",
     description: [
-      "Leveraged TypeScript, React, Tailwind CSS, Bootstrap, and REST API technologies to architect responsive user interfaces, optimize application performance, and rationalize manufacturing workflows.",
-      "Revitalized dashboard user experience through meticulous implementation of API interaction best practices.",
-      "Achieved a notable 50% reduction in web application load times, significantly enhancing overall performance.",
+      "Integrate the dashboard of manufacturing system with the backend API’s.",
+      "Inhance the dashboard performance and responsiveness.",
+      "Create the mobile app of the dropshipping website.",
+      "Switch the dashboard into progressive web app, to access the workers to integrate with the system.",
+      "Create CI/CD pipelines to enhance the deployment process in VPS server.",
     ],
     img: "/assets/inhouse.png",
     // github: "https://github.com/sbaamoha/frontend001/tree/master",
@@ -55,7 +60,7 @@ export const experiences = [
   {
     date: "May 2024 – Present",
     title: "Software Developer Contributor",
-    company: "Plane (Remote)",
+    company: "Plane and React Hook Form",
     description: [
       "Contributing to the development and improvement of open-source projects.",
       "Engaging in collaborative coding sessions, code reviews, and discussions to enhance project quality and functionality.",
@@ -67,9 +72,11 @@ export const experiences = [
     title: "Front-end Developer",
     company: "InHouse (Remote)",
     description: [
-      "Leveraged TypeScript, React, Tailwind CSS, Bootstrap, and REST API technologies to architect responsive user interfaces, optimize application performance, and rationalize manufacturing workflows.",
-      "Revitalized dashboard user experience through meticulous implementation of API interaction best practices.",
-      "Achieved a notable 50% reduction in web application load times, significantly enhancing overall performance.",
+      "Integrate the dashboard of manufacturing system with the backend API’s.",
+      "Inhance the dashboard performance and responsiveness.",
+      "Create the mobile app of the dropshipping website.",
+      "Switch the dashboard into progressive web app, to access the workers to integrate with the system.",
+      "Create CI/CD pipelines to enhance the deployment process in VPS server.",
     ],
   },
   {
@@ -77,7 +84,10 @@ export const experiences = [
     title: "Backend Developer",
     company: "Maroc4ps (Remote)",
     description: [
+      "Worked as backend developer with Node.js and Medusa.js",
       "Integrated the backend with different merchant centers including (Meta, Google, Bing, Tiktok, Twitter).",
+      "Created a custom medusa.js plugin and integrated it with main project.",
+      "Improve the SEO rank using nextjs with the recommended attitudes.",
     ],
   },
   {
@@ -85,7 +95,9 @@ export const experiences = [
     title: "Software Developer",
     company: "Freelance (Remote)",
     description: [
-      "Utilized JavaScript, React, Redux, Node.js, and MySQL in freelance projects, managing end-to-end development, deployment on VPS, and database manipulation.",
+      "Worked as Fullstack developer on gaming platform that manages arenas and worldwide Esports.",
+      "Worked on the dashboard of gaming web app, backend integration, statistics pages, ...",
+      "Integrate the app with Google services (Google analytics, Google Adsence)",
     ],
   },
 ];
