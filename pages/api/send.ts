@@ -8,8 +8,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { firstName, email, message, subject } = req.body;
     const { data, error } = await resend.emails.send({
-      from: "Portfolio <onboarding@resend.dev>",
-      to: ["sbaamohe@gmail.com"],
+      from: "mohamed@sbaamoha.com",
+      to: "mohamed@sbaamoha.com",
       subject,
       react: EmailTemplate({ firstName, message, email, subject }),
     });
