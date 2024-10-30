@@ -9,7 +9,6 @@ import { MdLightMode, MdModeNight } from "react-icons/md";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTheme } from "next-themes";
-import { UseThemeProps } from "next-themes/dist/types";
 import { useIsMobile } from "../hooks/use-mobile";
 
 const Navbar = () => {
@@ -64,10 +63,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className="flex px-3 py-3 lg:px-12 lg:py-6 nav items-center justify-between capitalize shadow-sm"
-      data-aos="fade-down"
-      data-aos-delay="50"
-      data-aos-duration="1500"
+      className="flex px-3 py-3 lg:px-12 lg:py-6 nav items-center justify-between capitalize shadow-sm rounded-full"
+      // data-aos="fade-down"
+      // data-aos-delay="50"
+      // data-aos-duration="1500"
     >
       <Link
         href="/"
