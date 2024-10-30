@@ -30,7 +30,7 @@ export const projects = [
       "Improve the SEO rank using nextjs with the recommended attitudes.",
     ],
     img: "/assets/maroc4ps.png",
-    live: "https://shop.maroc4ps.com/en",
+    live: "https://maroc4ps.com/",
   },
   // {
   //   id: 1,
