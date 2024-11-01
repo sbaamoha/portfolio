@@ -99,7 +99,7 @@ const Navbar = () => {
           navIsOpen ? `right-0 opacity-100` : `-right-full opacity-0`
         }`}
       >
-        {["projects", "technologies", "about"].map((item) => (
+        {["about", "experience", "projects", "contact"].map((item) => (
           <li
             onClick={() => setnavIsOpen(false)}
             className="btnCol my-6"

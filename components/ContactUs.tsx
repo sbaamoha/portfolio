@@ -64,7 +64,10 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="max-w-full mx-auto mt-10 p-6 shadow-md rounded-md">
+    <div
+      id="contact"
+      className="max-w-full mx-auto mt-10 p-6 shadow-md rounded-md"
+    >
       <h2 className="text-2xl font-semibold mb-4 text-center">Contact Us</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>

@@ -9,7 +9,7 @@ import Experience from "../components/Experience";
 
 export default function Home() {
   return (
-    <div className="font-dm-sans bg-primary-color dark:bg-slate-800 dark:text-white">
+    <div className="font-dm-sans overflow-hidden bg-primary-color dark:bg-slate-800 dark:text-white">
       <Head>
         <title>Mohamed&apos;s Portfolio</title>
         <meta name="description" content="Mohamed's Portfolio" />
