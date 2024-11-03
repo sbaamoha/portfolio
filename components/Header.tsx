@@ -38,6 +38,7 @@ const Header: React.FC = () => {
             front-end and back-end development, allowing me to approach every
             project with a holistic perspective.
           </p>
+
           <h3 className="mt-6 text-2xl font-semibold text-gray-900 dark:text-gray-100">
             Skills & Interests
           </h3>

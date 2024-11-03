@@ -37,6 +37,15 @@ export default function Home() {
 
       <main className="flex flex-col gap-10 lg:gap-16">
         <Header />
+        <div className="flex justify-center">
+          <a
+            href="/Resume-2.pdf"
+            download="Resume-2.pdf" // Customize the download name
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Download My Resume
+          </a>
+        </div>
         {/* <About /> */}
         <Experience />
         <Portfolio />

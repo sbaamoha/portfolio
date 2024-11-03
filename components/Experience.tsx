@@ -7,6 +7,7 @@ const Experience = () => {
       <h2 className="text-4xl font-bold mb-6 text-gray-900 text-center dark:text-gray-100">
         Experience
       </h2>
+
       <div className="relative border-l border-gray-200 dark:border-gray-700">
         {experiences.map((experience, index) => (
           <div key={index} className="mb-8 ml-4">
