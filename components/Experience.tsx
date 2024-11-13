@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { experiences } from "../public/constants/projects";
+import Aos from "aos";
 
 const Experience = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: "ease-in-out", // Easing for the animation
+      once: true, // Animation happens only once as you scroll
+    });
+  }, []);
+
   return (
-    <div id="experience" className="container mx-auto px-4 py-8">
+    <div
+      data-aos="fade-right"
+      id="experience"
+      className="container mx-auto px-4 py-8"
+    >
       <h2 className="text-4xl font-bold mb-6 text-gray-900 text-center dark:text-gray-100">
         Experience
       </h2>

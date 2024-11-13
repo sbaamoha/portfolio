@@ -1,16 +1,22 @@
 import { useEffect } from "react";
 
 import AOS from "aos";
-import "aos/dist/aos.css";
 import Image from "next/image";
 const Header: React.FC = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: "ease-in-out", // Easing for the animation
+      once: true, // Animation happens only once as you scroll
+    });
   }, []);
 
   return (
     <section id="about" className="px-3 py-12">
-      <div className="container mx-auto flex flex-col md:flex-row items-center">
+      <div
+        data-aos="fade-right"
+        className="container mx-auto flex flex-col md:flex-row items-center"
+      >
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
             src="/assets/profile.jpeg"

@@ -10,19 +10,20 @@ import "aos/dist/aos.css";
 
 const Portfolio: React.FC = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: "ease-in-out", // Easing for the animation
+      once: true, // Animation happens only once as you scroll
+    });
   }, []);
 
   return (
-    <div id="projects">
+    <div data-aos="fade-right" id="projects">
       <h2 className="capitalize text-4xl text-center">projects</h2>
       <div className="pt-12 grid grid-cols-1 lg:grid-cols-3 gap-6 px-6 lg:px-12">
         {projects.map((project) => (
           <div className="rounded-lg shadow-lg" key={project.id}>
             <Image
-              data-aos="fade-right"
-              data-aos-delay="100"
-              data-aos-duration="1000"
               className="rounded-lg cursor-pointer"
               src={project.img}
               alt={project.title}

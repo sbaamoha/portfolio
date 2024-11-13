@@ -1,6 +1,14 @@
-import { useState } from "react";
+import Aos from "aos";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 const ContactUs = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: "ease-in-out", // Easing for the animation
+      once: true, // Animation happens only once as you scroll
+    });
+  }, []);
   const [formData, setFormData] = useState({
     firstName: "",
     subject: "",
@@ -65,6 +73,7 @@ const ContactUs = () => {
 
   return (
     <div
+      data-aos="fade-left"
       id="contact"
       className="max-w-full mx-auto mt-10 p-6 shadow-md rounded-md"
     >

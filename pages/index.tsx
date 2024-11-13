@@ -6,6 +6,7 @@ import Portfolio from "../components/Portfolio";
 import Footer from "../components/Footer";
 import ContactUs from "../components/ContactUs";
 import Experience from "../components/Experience";
+import "aos/dist/aos.css";
 
 export default function Home() {
   return (
