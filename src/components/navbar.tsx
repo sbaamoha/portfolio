@@ -1,6 +1,8 @@
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
+import { PiReadCvLogoBold } from "react-icons/pi";
+
 import { Separator } from "@/components/ui/separator";
 import {
   Tooltip,
@@ -59,6 +61,21 @@ export default function Navbar() {
               </Tooltip>
             </DockIcon>
           ))}
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <a
+                href="/Mohamed-Software-developer.pdf"
+                download="Mohamed-Software-developer.pdf"
+              >
+                <PiReadCvLogoBold />
+              </a>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Resume</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
         <Separator orientation="vertical" className="h-full py-2" />
         <DockIcon>
           <Tooltip>

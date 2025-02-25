@@ -7,9 +7,9 @@ export const DATA = {
   url: "https://sbaamoha.com",
   location: "Algeria",
   // locationLink: "https://www.google.com/maps/place/sanfrancisco",
-  summary:
-    "Results-driven software developer with 2+ years of experience in front-end and back-end development. Known for delivering efficient, high-quality solutions with speed and precision. Skilled at tackling complex challenges and building innovative, scalable applications.",
   description:
+    "Software frontend developer with expertise in crafting aesthetically pleasing and highly functional websites and applications. Proficient in HTML, CSS, JavaScript, TypeScript, React, and Node.js.",
+  summary:
     "a professional software developer with a knack for creating elegant solutions in the least amount of time. With over two years of experience in software development, I am a dedicated professional known for crafting efficient solutions with precision and speed. I thrive on tackling complex challenges and excel in creating innovative solutions. My expertise spans across front-end and back-end development, allowing me to approach every project with a holistic perspective.",
   avatarUrl: "/me.jpeg",
   skills: ["React", "Next.js", "Typescript", "Node.js", "Postgres", "Docker"],
