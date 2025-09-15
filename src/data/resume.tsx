@@ -69,7 +69,7 @@ export const DATA = {
       start: "Sep 2023",
       end: "Present",
       description:
-        "Integrated the dashboard of a manufacturing system with backend APIs. Enhanced dashboard performance and responsiveness. Developed the mobile app for a dropshipping website. Transformed the dashboard into a progressive web app, enabling workers to integrate with the system. Created CI/CD pipelines to improve deployment on a VPS server.",
+        "Worked as Frappe/ERPNext Developer on the ERP System of the Company. Integrated the dashboard of a manufacturing system with backend APIs. Enhanced dashboard performance and responsiveness. Developed the mobile app for a dropshipping website. Transformed the dashboard into a progressive web app, enabling workers to integrate with the system. Created CI/CD pipelines to improve deployment on a VPS server.",
     },
     {
       company: "Maroc4ps",
@@ -112,7 +112,7 @@ export const DATA = {
     {
       title: "Software Developer Contributor",
       href: "https://plane.so/",
-      dates: "Ongoing",
+      dates: "Stopped",
       active: true,
       description:
         "Contributing to the development and improvement of open-source projects. Engaging in collaborative coding sessions, code reviews, and discussions to enhance project quality and functionality. Implementing new features and fixing bugs to ensure project stability and performance.",
@@ -135,7 +135,7 @@ export const DATA = {
     {
       title: "Moroccan Products Store",
       href: "https://maroc4ps.com/",
-      dates: "Ongoing",
+      dates: "Stopped",
       active: true,
       description:
         "Worked as a backend developer with Node.js and Medusa.js. Integrated the backend with various merchant centers including Meta, Google, Bing, TikTok, and Twitter. Created a custom Medusa.js plugin and integrated it with the main project. Improved SEO rankings using Next.js with recommended best practices.",
@@ -158,9 +158,27 @@ export const DATA = {
       video: "",
     },
     {
+      title: "ERPNext System",
+      href: "https://test-inhouse.frappe.cloud",
+      dates: "Ongoing",
+      active: true,
+      description:
+        "Migrted to ERPNext and implemented all custom features like: work order custom flow. logistics app. sales order automation between companies...",
+      technologies: ["Python", "Frappe", "ERPNext", "Javascript", "Backend"],
+      links: [
+        {
+          type: "Website",
+          href: "https://test-inhouse.frappe.cloud",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/assets/erpnext.png",
+      video: "",
+    },
+    {
       title: "ERP Manufacturing System Dashboard",
       href: "#", // Replace with the live URL if available
-      dates: "Ongoing",
+      dates: "Stopped",
       active: true,
       description:
         "Integrated the dashboard of the manufacturing system with backend APIs. Enhanced the dashboard performance and responsiveness. Created a mobile app for the dropshipping website. Converted the dashboard into a progressive web app (PWA) for workers to integrate with the system. Set up CI/CD pipelines for improved deployment in VPS servers.",
